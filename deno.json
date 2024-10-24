@@ -1,0 +1,14 @@
+{
+  "tasks": {
+    "dev": "deno -A --watch ./server/server.js",
+    "build": "deno compile --allow-all --output ./build/Athena.exe ./server/server.js",
+    "deploy": "cd ./build && ./Athena.exe",
+    "test": "deno test --coverage ./server/tests"
+  },
+  "imports": {
+    "express": "npm:express@^4.21.1",
+    "express-rate-limit": "npm:express-rate-limit@^7.4.1",
+    "express-slow-down": "npm:express-slow-down@^2.0.3"
+  },
+  "nodeModulesDir": "auto"
+}
